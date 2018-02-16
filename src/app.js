@@ -4,8 +4,20 @@ import ReactDOM from "react-dom";
 import ALTierApp from "./component/ALTierApp";
 // Style
 import "normalize.css/normalize.css";
+// Redux
+import { Provider } from "react-redux";
+import configStore from "./component/redux/store/configStore";
+
+// initialize redux store
+const store = configStore();
+// provide to app
+const provideReduxStoreToApp = (
+  <Provider store={store}>
+    <ALTierApp />
+  </Provider>
+)
 
 ReactDOM.render(
-  <ALTierApp />,
+  provideReduxStoreToApp,
   document.querySelector("#container")
 )
