@@ -1,13 +1,11 @@
-import React, {Fragment} from "react";
+import React from "react";
 import Column from "./Column";
 
 const ShipsList = () => (
-  <Fragment>
-    <div className="container columns">
-      <Column position={"Back"} />
-      <Column position={"Front"} />
-    </div>
-  </Fragment>
+  <main>
+    <Column position={"Back"} />
+    <Column position={"Front"} />
+  </main>
 )
 
 export default ShipsList;
