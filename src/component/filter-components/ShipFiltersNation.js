@@ -1,7 +1,12 @@
 import React, { Fragment } from "react";
+import ShipFiltersNationMap from "./ShipFiltersNationMap";
 
 const ShipFiltersNation = () => (
-  <h1>Test Filters: Nation</h1>
+  <div>
+    <h1>Test Filters: Nation</h1>
+  <ShipFiltersNationMap />
+  </div>
+  
 )
 
 export default ShipFiltersNation
