@@ -9,10 +9,11 @@ class Column extends React.Component {
     this.props.dispatch(shipsFetchData("http://localhost:3000/api/ships"));
   }
   render() {
+    const filterByPosition = this.props.ships.filter(ship => ship.position === this.props.position);
     return (
       <Fragment>
-        <h1>Test columns:</h1>
-        <TierRows />
+        <h1>{this.props.position}</h1>
+        <TierRows filteredData={filterByPosition} />
       </Fragment>
     )
   }
