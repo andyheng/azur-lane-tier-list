@@ -1,10 +1,17 @@
 import React, {Fragment} from "react";
 import Ship from "./Ship";
 
-const TierRow = () => (
+const TierRow = (props) => (
   <Fragment>
-    <h2>Test single Row</h2>
-    <Ship />
+    <h2>{props.rowTitle}</h2>
+    {
+      props.filteredDataByRows.map(ship => (
+        <Ship 
+          {...ship}
+          key={ship._id}
+        />
+      ))
+    }
   </Fragment>
 )
 
