@@ -32,8 +32,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.0"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1"
