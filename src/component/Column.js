@@ -1,7 +1,11 @@
-import React from "react";
+import React, {Fragment} from "react";
+import TierRows from "./TierRows";
 
 const Column = () => (
-  <h1>Test</h1>
+  <Fragment>
+    <h1>Test columns:</h1>
+    <TierRows />
+  </Fragment>
 )
 
 export default Column;
