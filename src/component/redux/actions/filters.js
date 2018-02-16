@@ -6,7 +6,7 @@ export const setNationFilter = (nation) => (
   }
 )
 
-export const setDetailFilter = (detail) => (
+export const setDetailsFilter = (detail) => (
   {
     type: "SET_DETAIL_FILTER",
     detail
