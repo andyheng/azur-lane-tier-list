@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Ship from "./Ship";
 
 const TierRow = (props) => (
-  <Fragment>
+  <div>
     <h2>{props.rowTitle}</h2>
     <div>
       {
@@ -12,7 +12,7 @@ const TierRow = (props) => (
           .sort((a, b) => b.props.rarity.localeCompare(a.props.rarity) || a.props.name.localeCompare(b.props.name))
       }
     </div>
-  </Fragment>
+  </div>
 )
 
 export default TierRow;
