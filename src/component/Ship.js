@@ -1,7 +1,7 @@
 import React from "react";
 
-const Ship = () => (
-  <p>Test Item</p>
+const Ship = ({name}) => (
+  <p>{name}</p>
 )
 
 export default Ship;
