@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
 import shipsReducer from "./shipsReducer";
+import filtersReducer from "./filtersReducer";
 
 export default combineReducers({
-  ships: shipsReducer
+  ships: shipsReducer,
+  filters: filtersReducer
 })
