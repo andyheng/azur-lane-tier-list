@@ -3,6 +3,7 @@ import TierRows from "./TierRows";
 // redux
 import { connect } from "react-redux";
 import { shipsFetchData } from "./redux/actions/ships";
+import showFilteredShips from "./redux/selectors/ships";
 
 class Column extends React.Component {
   componentDidMount() {
@@ -11,17 +12,17 @@ class Column extends React.Component {
   render() {
     const filterByPosition = this.props.ships.filter(ship => ship.position === this.props.position);
     return (
-      <Fragment>
+      <section>
         <h1>{this.props.position}</h1>
         <TierRows filteredData={filterByPosition} />
-      </Fragment>
+      </section>
     )
   }
 }
 
 const mapStateToprops = (state) => {
   return {
-    ships: state.ships
+    ships: showFilteredShips(state.ships, state.filters)
   }
 }
 
