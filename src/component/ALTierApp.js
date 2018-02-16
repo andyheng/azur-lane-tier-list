@@ -1,7 +1,10 @@
 import React, { Fragment } from "react";
+import Header from "./Header";
 
 const ALTierApp = () => (
-  <p>Test!</p>
+  <Fragment>
+    <Header />
+  </Fragment>
 )
 
 export default ALTierApp
