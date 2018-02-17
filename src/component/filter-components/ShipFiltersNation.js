@@ -21,22 +21,23 @@ const ShipFiltersNation = (props) => {
         <span>Nation</span>
         {props.filters.nationVisible ? <span>✖</span> : <span>▼</span>}
       </button>
+      
       <CSSTransitionGroup
         transitionName="transitionFilter"
         transitionEnterTimeout={400}
         transitionLeaveTimeout={400}
         component={Fragment}
       >
-        {props.filters.nationVisible ? <ShipFiltersNationMap /> : "" }
+        {props.filters.nationVisible && <ShipFiltersNationMap /> }
       </CSSTransitionGroup>
     </section>
-      )
-    }
-    
-    const mapStateToProps = (state) => (
-  {
-        filters: state.filters
-    }
   )
-  
+}
+
+const mapStateToProps = (state) => (
+  {
+    filters: state.filters
+  }
+)
+
 export default connect(mapStateToProps)(ShipFiltersNation);
