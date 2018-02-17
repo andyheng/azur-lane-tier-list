@@ -1,0 +1,17 @@
+.transitionFilter-enter {
+  opacity: 0.01;
+}
+
+.transitionFilter-enter.transitionFilter-enter-active {
+  opacity: 1;
+  transition: 400ms;
+}
+
+.transitionFilter-leave {
+  opacity: 1;
+}
+
+.transitionFilter-leave.transitionFilter-leave-active {
+  opacity: 0.01;
+  transition: 400ms;
+}
