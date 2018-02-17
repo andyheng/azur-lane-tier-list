@@ -11,7 +11,6 @@ const filtersReducerDefault = {
 const filtersReducer = (state = filtersReducerDefault, action) => {
   switch (action.type) {
     case "SET_NATION_FILTER":
-      console.log(action.nation);
       if (state.nation === action.nation) {
         return { ...state, nation: "" }
       }
@@ -35,6 +34,7 @@ const filtersReducer = (state = filtersReducerDefault, action) => {
         ...state, detailsVisible: !state.detailsVisible
       }
     case "SET_NATION_FILTER_VISIBILITY":
+      console.log("?")
       return {
         ...state, nationVisible: !state.nationVisible
       }
