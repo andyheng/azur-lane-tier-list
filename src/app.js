@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import ALTierApp from "./component/ALTierApp";
 // Style
 import "normalize.css/normalize.css";
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import "./style/style.scss";
 // Redux
 import { Provider } from "react-redux";
