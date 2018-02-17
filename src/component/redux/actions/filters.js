@@ -21,7 +21,7 @@ export const setRarityFilter = (rarity) => (
 )
 
 // Visability actions
-export const setRarityFilterVisiblity = () => (
+export const setRarityFilterVisibility = () => (
   {
     type: "SET_RARITY_FILTER_VISIBILITY"
   }
