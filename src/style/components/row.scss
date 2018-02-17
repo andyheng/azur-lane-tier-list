@@ -1,0 +1,7 @@
+.row {
+  margin: $siz-1 0;
+}
+.row__items {
+  display: flex;
+  flex-flow: row wrap;
+}

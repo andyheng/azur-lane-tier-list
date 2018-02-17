@@ -1,0 +1,56 @@
+.item {
+  background: $light-gray;
+  margin: $siz-05;
+}
+
+.item__icon {
+  position: relative;
+}
+
+.item__image {
+  border-top: 1px solid $mid-gray;
+  border-left: 1px solid $mid-gray;
+  border-right: 1px solid $mid-gray;
+  display: block;
+  max-height: 116px;
+}
+
+.item__hull {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item__details {
+  color: $off-white;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 1px $off-black;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  
+}
+.item__detail {
+  opacity: 0.9;
+  padding: 3px;
+}
+
+.item__name {
+  padding: $siz-05;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.item--bg-SSR {
+  background: $ssr-gold;
+}
+.item--bg-SR {
+  background: $sr-purple;
+}
+.item--bg-R {
+  background: $r-blue;
+}
+.item--bg-N {
+  background: $light-gray
+}

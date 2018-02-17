@@ -1,0 +1,23 @@
+.column {
+  background: $off-white; 
+  border-radius: 2px;
+  box-shadow: 0.5px 0.5px 5px $off-black;
+  padding: $siz-1;
+  flex: 1 1 50%;
+}
+
+// provides spacing between columns
+.column:nth-child(2n) {
+  margin-left: $siz-1;
+  flex-basis: 70%;
+}
+
+.column__title {
+  border-bottom: 1px solid $off-black;
+  display: inline-block;
+  font-size: $siz-1;
+  font-weight: 300;
+  margin-bottom: $siz-1;
+  padding-bottom: $siz-05;
+  text-transform: uppercase;
+}
