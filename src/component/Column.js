@@ -12,7 +12,7 @@ class Column extends React.Component {
   render() {
     const filterByPosition = this.props.ships.filter(ship => ship.position === this.props.position);
     return (
-      <section>
+      <section className="content__column">
         <h1>{this.props.position}</h1>
         <TierRows filteredData={filterByPosition} />
       </section>
