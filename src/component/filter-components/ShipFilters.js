@@ -4,12 +4,16 @@ import ShipFiltersNation from "./ShipFiltersNation";
 import ShipFiltersDetails from "./ShipFiltersDetails";
 import ShipFiltersRarity from "./ShipFiltersRarity";
 
+import PerfectScrollbar from 'react-perfect-scrollbar'
+
 const ShipFilters = () => (
-  <section>
-    <ShipFiltersNation title={"Nation"} />
-    <ShipFiltersDetails title={"Details"} />
-    <ShipFiltersRarity title={"Rarity"} />
-  </section>
+  <aside className="filters">
+    <PerfectScrollbar>
+      <ShipFiltersNation title={"Nation"} />
+      <ShipFiltersDetails title={"Details"} />
+      <ShipFiltersRarity title={"Rarity"} />
+    </PerfectScrollbar>
+  </aside>
 )
 
 export default ShipFilters
