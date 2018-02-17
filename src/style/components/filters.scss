@@ -2,10 +2,10 @@
   position: fixed;
   background: $mid-gray;
   height: calc(100vh - 120px);
-  width: 210px;
+  width: $sidebar-width;
   overflow-y: auto;
   box-shadow: 1px 0 5px black;
-  margin-top: 90px;
+  top: $header-height;
 }
 
 .filter__handler-btn {
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: $siz-1;
+  padding: 1rem;
   color: $off-white;
   transition: 0.2s filter ease-in-out;
 }
@@ -34,7 +34,7 @@
 }
 
 .filters__btn {
-  background: #292929;
+  background: #3d3d3d;
   border: none;
   color: $off-white;
   filter: brightness(80%);
@@ -47,7 +47,7 @@
   transition: filter 0.2s ease-in-out;
 }
 .filters__btn:hover {
-  filter: brightness(90%);
+  filter: brightness(95%);
 }
 .filters__btn--active {
  filter: brightness(100%); 
