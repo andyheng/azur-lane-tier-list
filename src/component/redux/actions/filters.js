@@ -21,19 +21,19 @@ export const setRarityFilter = (rarity) => (
 )
 
 // Visability actions
-export const SetRarityFilterVisiblity = () => (
+export const setRarityFilterVisiblity = () => (
   {
     type: "SET_RARITY_FILTER_VISIBILITY"
   }
 )
 
-export const SetDetailsFilterVisiblity = () => (
+export const setDetailsFilterVisiblity = () => (
   {
     type: "SET_DETAILS_FILTER_VISIBILITY"
   }
 )
 
-export const SetNationFilterVisiblity = () => (
+export const setNationFilterVisiblity = () => (
   {
     type: "SET_NATION_FILTER_VISIBILITY"
   }
