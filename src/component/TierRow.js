@@ -2,9 +2,9 @@ import React from "react";
 import Ship from "./Ship";
 
 const TierRow = (props) => (
-  <div>
-    <h2>{props.rowTitle}</h2>
-    <div>
+  <div className="row">
+    <h2 className="row__title">{props.rowTitle}</h2>
+    <div className="row__items">
       {
         // create ship item, sort by rarity, then sort by name
         props.filteredDataByRows

@@ -4,13 +4,13 @@ import ShipDetails from "./ShipDetails";
 
 // still need rarity background.
 const Ship = ({name, src, hullType, nation, rarity, tier, details}) => (
-  <div className="item-container">
-    <div>
-      <img src={src} />
+  <div className="item">
+    <div className={`item__icon item--bg-${rarity}`}>
+      <img src={src} className="item__image" />
       <HullIcon hullType={hullType} />
       <ShipDetails details={details} />
     </div>
-    <h3>{name}</h3>
+    <h3 className="item__name">{name}</h3>
   </div>
 )
 

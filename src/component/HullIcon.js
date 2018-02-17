@@ -20,7 +20,7 @@ const HullIcon = (props) => {
     DD
   }
   return (
-    <img src={HullIcons[props.hullType]} />
+    <img src={HullIcons[props.hullType]} className="item__hull" />
   )
 }
 
