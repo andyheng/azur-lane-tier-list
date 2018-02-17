@@ -1,6 +1,7 @@
 .content {
   display: flex;
-  max-width: 80%;
+  max-width: calc(90% - 400px);
   margin: 0 auto;
+  padding-top: 90px;
   margin-bottom: $siz-1;
 }
