@@ -3,7 +3,7 @@ header {
   border-bottom: 1px solid black;
   position: fixed;
   width: 100%;
-  min-height: 80px;
+  max-height: 80px;
   padding: $siz-1;
   color: $off-white;
   z-index: 2;
