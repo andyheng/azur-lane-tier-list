@@ -1,0 +1,53 @@
+.filters__btn--additionalGun,
+.item__detail--additionalGun {
+  background: $ag-red !important;
+}
+.filters__btn--torpedo,
+.item__detail--torpedo {
+  background: $to-blue !important;
+}
+.filters__btn--barrage,
+.item__detail--barrage {
+  background: $ba-green !important;
+}
+.filters__btn--antiAir,
+.item__detail--antiAir {
+  background: $aa-green !important;
+}
+.filters__btn--activationBuff,
+.item__detail--activationBuff {
+  background: $acbuff-pink !important;
+}
+.filters__btn--persistentBuff,
+.item__detail--persistentBuff {
+  background: $pebuff-purple !important;
+}
+.filters__btn--recovery,
+.item__detail--recovery {
+  background: $rec-green !important;
+}
+.filters__btn--survival,
+.item__detail--survival {
+  background: $sur-orange !important;
+}
+.filters__btn--retrofit,
+.item__detail--retrofit {
+  background: $retro-yellow !important;
+}
+.filters__btn--limited,
+.item__detail--limited {
+  background: $lim-gray !important;
+}
+
+.filters__btn--SSR {
+  background: $ssr-gold !important;
+}
+.filters__btn--SR {
+  background: $sr-purple !important;
+}
+.filters__btn--R {
+  background: $r-blue !important;
+}
+.filters__btn--N {
+  background: $n-white !important;
+}
