@@ -1,7 +1,8 @@
 .content {
   display: flex;
-  max-width: calc(90% - 400px);
-  margin: 0 auto;
-  padding-top: 90px;
-  margin-bottom: $siz-1;
+  max-width: calc(85% - #{$sidebar-width});
+  margin: 0 auto $siz-1;
+  position: relative;
+  top: $header-height;
+  left: 100px;
 }
