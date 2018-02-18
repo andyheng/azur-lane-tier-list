@@ -15,7 +15,11 @@ const TierRow = (props) => (
       >
         {
           // create ship item, sort by rarity, then sort by name
-          props.filteredDataByRows.length < 1 ? <img src={idunnolol} /> :
+          props.filteredDataByRows.length < 1 ? 
+          <div className="item">
+            <img src={idunnolol} className="item__image" />
+            <h3 className="item__name">Nothing here</h3>
+          </div> :
           props.filteredDataByRows
             .map(ship => (<Ship {...ship} key={ship._id} />))
             .sort((a, b) => b.props.rarity.localeCompare(a.props.rarity) || a.props.name.localeCompare(b.props.name))
