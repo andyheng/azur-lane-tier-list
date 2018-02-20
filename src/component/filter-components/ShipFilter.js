@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { clearFilter } from "../redux/actions/filters";
 import { CSSTransitionGroup } from "react-transition-group";
 import MapFilters from "./MapFilters";
+import {SlideDown} from 'react-slidedown'
+import 'react-slidedown/lib/slidedown.css'
 
 const ShipFilter = (props) => {
   const showAndClearFilter = () => {
@@ -20,14 +22,9 @@ const ShipFilter = (props) => {
         {props.filters[props.filterVis] ? <span>✖</span> : <span>▼</span> }
       </button>
 
-      <CSSTransitionGroup
-        transitionName="transitionFilter"
-        transitionEnterTimeout={400}
-        transitionLeaveTimeout={400}
-        component={Fragment}
-      >
-      {props.filters[props.filterVis] && <MapFilters filter={props.filter} arr={props.arr} setFilter={props.setFilter}/>}
-      </CSSTransitionGroup>
+      <SlideDown className={"slidedown"}>
+        {props.filters[props.filterVis] && <MapFilters filter={props.filter} arr={props.arr} setFilter={props.setFilter}/>}
+      </SlideDown>
     </section>
   )
 }
