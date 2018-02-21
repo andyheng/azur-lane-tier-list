@@ -4,7 +4,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 
 //
 import ShipFilter from "./ShipFilter";
-import {detailsAll, nationsAll, rarityAll} from "./filterArrs";
+import {appArrs} from "../appArrs";
 import { 
   setNationFilter, 
   setNationFilterVisiblity, 
@@ -20,7 +20,7 @@ const ShipFilters = () => (
         title={"Nation"}
         filter={"nation"}
         filterVis={"nationVisible"}
-        arr={nationsAll}
+        arr={appArrs.nations}
         setFilter={setNationFilter}
         setVis={setNationFilterVisiblity}
       />
@@ -28,7 +28,7 @@ const ShipFilters = () => (
         title={"Details"}
         filter={"detail"}
         filterVis={"detailsVisible"}
-        arr={detailsAll}
+        arr={appArrs.details}
         setFilter={setDetailsFilter}
         setVis={setDetailsFilterVisiblity}
       />
@@ -36,7 +36,7 @@ const ShipFilters = () => (
         title={"Rarity"}
         filter={"rarity"}
         filterVis={"rarityVisible"}
-        arr={rarityAll}
+        arr={appArrs.rarity}
         setFilter={setRarityFilter}
         setVis={setRarityFilterVisibility}
       />
