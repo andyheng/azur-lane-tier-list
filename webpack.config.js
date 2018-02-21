@@ -1,6 +1,5 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
 
 module.exports = (env) => {
   const isPro = env === "production"; // check if production webpack was run
@@ -50,8 +49,7 @@ module.exports = (env) => {
     }]
     },
     plugins: [
-      CSSExtract,
-      new Dotenv()
+      CSSExtract
     ],
     // if in production mode, use source-map; in dev mode, use module source map
     devtool: isPro ? "source-map" : "cheap-module-eval-source-map",
