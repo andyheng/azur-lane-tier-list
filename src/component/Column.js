@@ -7,7 +7,7 @@ import showFilteredShips from "./redux/selectors/ships";
 
 class Column extends React.Component {
   componentDidMount() {
-    this.props.dispatch(shipsFetchData(process.env.API_URL));
+    this.props.dispatch(shipsFetchData("/api/ships"));
   }
   render() {
     const filterByPosition = this.props.ships.filter(ship => ship.position === this.props.position);
