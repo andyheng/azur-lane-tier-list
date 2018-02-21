@@ -2,14 +2,17 @@ import React, {Fragment} from "react";
 import TierRow from "./TierRow";
 import {connect} from "react-redux"
 import { CSSTransitionGroup } from "react-transition-group";
+import { appArrs } from "./appArrs";
 
 class TierRows extends React.Component {
   state = {
     isLoading: false
   }
+
   handleState() {
     this.setState(() => ({isLoading: !this.state.isLoading}), this.delayState )
   }
+  
   delayState() {
     setTimeout(() => {
       this.setState(() => ({
@@ -17,23 +20,14 @@ class TierRows extends React.Component {
       }))
     }, 400)
   }
+
   componentWillReceiveProps(nextProps) {
     if (JSON.stringify(nextProps.filteredData) !== JSON.stringify(this.props.filteredData)) {
       this.handleState()
     }
   }
-  setLoadingClass() {
-    let className = "spinner";
-    if (this.props.position === "Back") {
-      className += " spinner-left"
-    } else {
-      className += " spinner-right"
-    }
-    return className;
-  }
   
   render() {
-    const rowTiers = ["T0", "T1", "T2", "T3", "T4", "T5"];
     return (
       <div>
         <CSSTransitionGroup
@@ -44,7 +38,7 @@ class TierRows extends React.Component {
       >
         {
           this.state.isLoading ? null :
-            rowTiers.map(tier => (
+            appArrs.tiers.map(tier => (
               <TierRow 
                 filteredDataByRows={this.props.filteredData.filter(ship => ship.tier === tier)}
                 key={tier}
@@ -58,6 +52,4 @@ class TierRows extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({filters: state.filters})
-
-export default connect(mapStateToProps)(TierRows);
+export default TierRows;
