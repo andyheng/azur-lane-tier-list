@@ -22,7 +22,11 @@ const TierRow = (props) => (
           </div> :
           props.filteredDataByRows
             .map(ship => (<Ship {...ship} key={ship._id} />))
-            .sort((a, b) => b.props.rarity.localeCompare(a.props.rarity) || a.props.name.localeCompare(b.props.name))
+            .sort((a, b) => (
+              b.props.rarity.localeCompare(a.props.rarity) || 
+              a.props.hullType.localeCompare(b.props.hullType)) ||
+              a.props.name.localeCompare(b.props.name)
+            )
         }
       </CSSTransitionGroup>
   </div>
