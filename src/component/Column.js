@@ -1,20 +1,44 @@
-import React from "react";
+import React, { Fragment } from "react";
 import TierRows from "./TierRows";
 // redux
 import { connect } from "react-redux";
 import { shipsFetchData } from "./redux/actions/ships";
 import showFilteredShips from "./redux/selectors/ships";
+import { setVisibleColumn } from "./redux/actions/column";
+import { CSSTransitionGroup } from "react-transition-group";
 
 class Column extends React.Component {
   componentDidMount() {
     this.props.dispatch(shipsFetchData("/api/ships"));
   }
+
   render() {
     const filterByPosition = this.props.ships.filter(ship => ship.position === this.props.position);
     return (
       <section className="column">
-        <h2 className="column__title">{this.props.position}</h2>
-        <TierRows filteredData={filterByPosition} />
+        <CSSTransitionGroup
+          transitionName="columnFilter"
+          transitionEnterTimeout={400}
+          transitionLeaveTimeout={400}
+          component={Fragment}
+        >
+
+          {this.props.ships.length < 1 ?
+            null :
+            <div>
+              <button
+                onClick={() => this.props.dispatch(setVisibleColumn())}
+                className={"content__btn-switcher"}
+              >
+                Show {this.props.column.isFrontVisible ? "Backline" : "Frontline"}
+              </button>
+              <div className="column__title-container">
+                <h2 className="column__title">{this.props.position}</h2>
+              </div>
+              <TierRows filteredData={filterByPosition} />
+            </div>
+          }
+        </CSSTransitionGroup>
       </section>
     )
   }
@@ -22,7 +46,8 @@ class Column extends React.Component {
 
 const mapStateToprops = (state) => {
   return {
-    ships: showFilteredShips(state.ships, state.filters)
+    ships: showFilteredShips(state.ships, state.filters),
+    column: state.column
   }
 }
 
