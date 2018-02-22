@@ -1,6 +1,8 @@
 .item {
-  background: $light-gray;
+  background: $off-white;
   margin: $siz-05;
+  box-shadow: 0 0 5px $mid-gray;
+  border-radius: 2px;
 }
 
 .item__icon {
@@ -8,16 +10,13 @@
 }
 
 .item__image {
-  border-top: 1px solid $mid-gray;
-  border-left: 1px solid $mid-gray;
-  border-right: 1px solid $mid-gray;
   display: block;
   max-height: 116px;
 }
 
 .item__hull {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
 }
 
@@ -28,7 +27,6 @@
   display: flex;
   position: absolute;
   bottom: 0;
-  left: 1px;
   
 }
 .item__detail {
@@ -37,9 +35,9 @@
 }
 
 .item__name {
-  padding: $siz-05;
-  font-size: 1.4rem;
-  font-weight: 300;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .item--bg-SSR {
