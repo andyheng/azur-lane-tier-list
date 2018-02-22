@@ -18,7 +18,7 @@ class TierRows extends React.Component {
       this.setState(() => ({
         isLoading: false
       }))
-    }, 400)
+    }, 200)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,8 +32,8 @@ class TierRows extends React.Component {
       <div>
         <CSSTransitionGroup
         transitionName="transitionFilter"
-        transitionEnterTimeout={400}
-        transitionLeaveTimeout={400}
+        transitionEnterTimeout={200}
+        transitionLeaveTimeout={200}
         component={Fragment}
       >
         {
