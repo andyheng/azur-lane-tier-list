@@ -1,7 +1,13 @@
 .row {
   margin: $siz-1 0;
 }
+.row__title {
+  text-align: center;
+  margin: $siz-05 0;
+}
 .row__items {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  position: relative;
 }
