@@ -1,10 +1,10 @@
 .transitionFilter-enter {
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .transitionFilter-enter.transitionFilter-enter-active {
   opacity: 1;
-  transition: 500ms;
+  transition: 200ms;
 }
 
 .transitionFilter-leave {
@@ -12,6 +12,24 @@
 }
 
 .transitionFilter-leave.transitionFilter-leave-active {
-  opacity: 0.3;
-  transition: 500ms;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.columnFilter-enter {
+  opacity: 0.2;
+}
+
+.columnFilter-enter.columnFilter-enter-active {
+  opacity: 1;
+  transition: 400ms;
+}
+
+.columnFilter-leave {
+  opacity: 1;
+}
+
+.columnFilter-leave.columnFilter-leave-active {
+  opacity: 0.2;
+  transition: 400ms;
 }
