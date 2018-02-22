@@ -34,7 +34,6 @@ const filtersReducer = (state = filtersReducerDefault, action) => {
         ...state, detailsVisible: !state.detailsVisible
       }
     case "SET_NATION_FILTER_VISIBILITY":
-      console.log("?")
       return {
         ...state, nationVisible: !state.nationVisible
       }
