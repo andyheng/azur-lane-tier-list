@@ -3,6 +3,13 @@
   margin: $siz-05;
   box-shadow: 0 0 5px $mid-gray;
   border-radius: 2px;
+  position: relative;
+}
+.item:active {
+  top: 2px;
+}
+.item:hover {
+  bottom: 2px;
 }
 
 .item__icon {
@@ -12,6 +19,10 @@
 .item__image {
   display: block;
   max-height: 116px;
+  position: relative;
+}
+.item__image:hover {
+  cursor: pointer;
 }
 
 .item__hull {

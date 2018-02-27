@@ -8,3 +8,15 @@ header {
   color: $off-white;
   z-index: 2;
 }
+
+.header__title {
+  color: $off-white;
+  text-decoration: none;
+  transition: filter 0.2s ease-in-out;
+}
+.header__title:hover {
+  filter: brightness(90%);
+}
+.header__title:active {
+  filter: brightness(80%);
+}
