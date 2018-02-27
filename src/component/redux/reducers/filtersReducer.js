@@ -4,7 +4,7 @@ const filtersReducerDefault = {
   detail: "",
   rarity: "",
   rarityVisible: false,
-  detailsVisible: false,
+  detailsVisible: true,
   nationVisible: false
 }
 
