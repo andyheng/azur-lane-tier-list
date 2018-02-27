@@ -10,17 +10,11 @@
 }
 
 .content__btn-switcher {
-  position: absolute;
-  right: 0;
-  top: 0;
   border: none;
   background: #e4e4e4;
   color: $dark-gray;
   padding: 1rem;
-  border-left: 1px solid $mid-gray;
-  border-bottom: 1px solid $mid-gray;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 2px;
+
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 .content__btn-switcher:hover {

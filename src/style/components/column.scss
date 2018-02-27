@@ -9,11 +9,11 @@
 .column__title-container {
   display: flex;
   justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 
 .column__title {
-  border-bottom: 1px solid $off-black;
-  display: inline-block;
   font-size: 3rem;
   font-weight: 300;
   margin-left: $siz-05;
