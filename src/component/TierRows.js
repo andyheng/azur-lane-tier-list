@@ -3,6 +3,9 @@ import TierRow from "./TierRow";
 import {connect} from "react-redux"
 import { CSSTransitionGroup } from "react-transition-group";
 import { appArrs } from "./appArrs";
+import Modal from "react-modal";
+import ShipModal from "./ShipModal";
+import {showModal} from "./redux/actions/modal";
 
 class TierRows extends React.Component {
   state = {
@@ -46,10 +49,11 @@ class TierRows extends React.Component {
               />
             ))
         }
+        <ShipModal />
         </CSSTransitionGroup>
       </div>
     )
   }
 }
 
-export default TierRows;
+export default connect()(TierRows);

@@ -6,6 +6,7 @@ import { shipsFetchData } from "./redux/actions/ships";
 import showFilteredShips from "./redux/selectors/ships";
 import { setVisibleColumn } from "./redux/actions/column";
 import { CSSTransitionGroup } from "react-transition-group";
+import ShipModal from "./ShipModal";
 
 class Column extends React.Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class Column extends React.Component {
     const filterByPosition = this.props.ships.filter(ship => ship.position === this.props.position);
     return (
       <section className="column">
+        {/* <ShipModal /> */}
         <CSSTransitionGroup
           transitionName="columnFilter"
           transitionEnterTimeout={400}
@@ -26,14 +28,14 @@ class Column extends React.Component {
           {this.props.ships.length < 1 ?
             null :
             <div>
-              <button
-                onClick={() => this.props.dispatch(setVisibleColumn())}
-                className={"content__btn-switcher"}
-              >
-                Show {this.props.column.isFrontVisible ? "Backline" : "Frontline"}
-              </button>
               <div className="column__title-container">
                 <h2 className="column__title">{this.props.position}</h2>
+                <button
+                  onClick={() => this.props.dispatch(setVisibleColumn())}
+                  className={"content__btn-switcher"}
+                >
+                  Show {this.props.column.isFrontVisible ? "Backline" : "Frontline"}
+                </button>
               </div>
               <TierRows filteredData={filterByPosition} />
             </div>

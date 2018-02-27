@@ -1,17 +1,26 @@
 import React from "react";
 import HullIcon from "./HullIcon";
 import ShipDetails from "./ShipDetails";
+import ShipModal from "./ShipModal";
+import {showModal} from "./redux/actions/modal";
+import {connect} from "react-redux";
 
-// still need rarity background.
-const Ship = ({name, src, hullType, nation, rarity, tier, details}) => (
-  <div className="item">
-    <div className={`item__icon item--bg-${rarity}`}>
-      <img src={src} className="item__image" />
-      <HullIcon hullType={hullType} />
-      <ShipDetails details={details} />
-    </div>
-    <h3 className="item__name">{name}</h3>
-  </div>
-)
+class Ship extends React.Component {
+  render() {
+    return (
+      <div className="item">
+        <div className={`item__icon item--bg-${this.props.rarity}`}>
+          <img 
+            src={this.props.src} className="item__image"
+            onClick={() => this.props.dispatch(showModal(this.props))} 
+          />
+          <HullIcon hullType={this.props.hullType} />
+          <ShipDetails details={this.props.details} />
+        </div>
+        <h3 className="item__name">{this.props.name}</h3>
+      </div>
+    )
+  }
+}
 
-export default Ship;
+export default connect()(Ship);

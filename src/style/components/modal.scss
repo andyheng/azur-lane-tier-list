@@ -1,0 +1,109 @@
+.ReactModalPortal > div {
+  z-index: 100;
+  opacity: 0;
+}
+
+.ReactModalPortal > .ReactModal__Overlay {
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(104, 104, 104, 0.6) !important;
+}
+
+.ReactModalPortal > .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal > .ReactModal__Overlay--before-close {
+  opacity: 0; 
+}
+
+.modal {
+  background: white;
+  max-width: 60%;
+  left: 50px;
+  box-shadow: 0 0 5px rgb(83, 83, 83);
+  position: relative;
+  border-radius: 2px;
+}
+.modal__title {
+  margin: 2rem 2rem 1rem;
+  display: inline-block;
+}
+
+.modal__skill-container {
+  padding: 1rem 2rem;
+  position: relative;
+}
+.modal__skill-container:last-child {
+  margin-bottom: 1rem;
+}
+.modal__skill-container::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  bottom: -0.5rem;
+  background: $light-gray;
+  height: 1px;
+  width: 45px;
+}
+.modal__skill-container:last-child::after {
+  height: 0;
+  width: 0;
+}
+
+.modal__skill-title {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.modal__skill-desc {
+  display: flex;
+}
+.modal__skill-icon {
+  margin-right: 1rem;
+  max-height: 30px;
+}
+.testing {
+  display: flex;
+}
+
+.modal__skill {
+  display: inline-block;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  margin-left: 0.7rem;
+}
+
+.modal__skill--Support {
+  background: rgb(228, 228, 143);
+  border: 1px solid rgb(167, 167, 73);
+}
+.modal__skill--Offensive {
+  background: rgb(255, 184, 184);
+  border: 1px solid rgb(155, 66, 66);
+}
+.modal__skill--Defensive {
+  background: rgb(159, 159, 235);
+  border: 1px solid rgb(68, 68, 182);
+}
+
+.modal__btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border: none;
+  color: $off-black;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid $off-black;
+}
